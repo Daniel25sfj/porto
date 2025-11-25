@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "title": "Designer's Toolkit",
+    "route": "/portfolio/designers-toolkit",
+    "description": "Bento-style knowledge hub showcasing an employee's design system work, optimized for React/Next.js with Tailwind CSS.",
+    "owner": {
+      "name": "Haidi Noor",
+      "role": "Lead Product Designer",
+      "headshot": "/images/talent/haidi-noor.png"
+    }
+  },
+  "foundations": {
+    "colors": {
+      "primary": "#1E1F2B",
+      "primaryMuted": "#2A2B3D",
+      "accent": "#E5C48C",
+      "brandGreen": "#54D38C",
+      "brandGreenDark": "#249255",
+      "surface": "#F8F7F3",
+      "card": "#FFFFFF",
+      "sidebar": "#F0EEE4",
+      "text": "#0C0D13",
+      "textMuted": "#5E5F6A",
+      "divider": "#ECEAE3"
+    },
+    "fonts": {
+      "heading": "Space Grotesk, sans-serif",
+      "body": "Inter, sans-serif"
+    },
+    "typography": {
+      "display": {
+        "size": "text-4xl",
+        "tracking": "tracking-tight",
+        "weight": "font-semibold"
+      },
+      "body": {
+        "size": "text-base",
+        "leading": "leading-relaxed",
+        "weight": "font-normal"
+      },
+      "eyebrow": {
+        "size": "text-xs",
+        "tracking": "tracking-[0.25em]",
+        "weight": "font-semibold",
+        "case": "uppercase"
+      }
+    },
+    "spacingScale": [
+      "0.25rem",
+      "0.5rem",
+      "0.75rem",
+      "1rem",
+      "1.5rem",
+      "2rem",
+      "3rem"
+    ],
+    "radius": {
+      "sm": "rounded-lg",
+      "lg": "rounded-3xl",
+      "full": "rounded-full"
+    },
+    "shadow": {
+      "card": "shadow-[0_20px_60px_rgba(8,15,32,0.12)]"
+    }
+  },
+  "layout": {
+    "maxWidth": "max-w-[1200px]",
+    "columns": 12,
+    "gutters": "gap-6",
+    "sections": [
+      {
+        "id": "scaffold",
+        "type": "two-column",
+        "left": {
+          "width": "w-3/12",
+          "component": "SidebarNav"
+        },
+        "right": {
+          "width": "w-9/12",
+          "stack": [{ "component": "Hero" }, { "component": "KnowledgeGrid" }]
+        }
+      }
+    ]
+  },
+  "components": {
+    "SidebarNav": {
+      "wrapper": "bg-sidebar p-6 rounded-3xl flex flex-col gap-6",
+      "logo": {
+        "text": "icons DS",
+        "classes": "text-lg font-semibold text-text"
+      },
+      "actions": [
+        {
+          "label": "Add new section",
+          "icon": "plus",
+          "variant": "ghost",
+          "classes": "flex items-center gap-2 text-primary text-sm"
+        }
+      ],
+      "navGroups": [
+        {
+          "title": "Documentation",
+          "items": [
+            "Documentation",
+            "Road map",
+            "Customer feedback",
+            "Showcase",
+            "Bento structure"
+          ]
+        },
+        {
+          "title": "Community",
+          "items": ["Suggest new features", "Contact us"]
+        }
+      ],
+      "assetCards": [
+        {
+          "eyebrow": "Iconography",
+          "title": "2,000 icons",
+          "icon": "sparkles"
+        },
+        {
+          "eyebrow": "3D Models",
+          "title": "20 assets",
+          "icon": "cube"
+        },
+        {
+          "eyebrow": "Spot illustrations",
+          "title": "150+ images",
+          "icon": "palette"
+        },
+        {
+          "eyebrow": "Hero banners",
+          "title": "45 layouts",
+          "icon": "layout"
+        },
+        {
+          "eyebrow": "Webfont",
+          "title": "Fully functional font",
+          "icon": "type"
+        }
+      ]
+    },
+    "Hero": {
+      "wrapper": "bg-card rounded-3xl p-10 flex gap-8 items-center shadow-card",
+      "content": {
+        "kicker": "Designers toolkit",
+        "title": "Systematic toolkit for confident teams",
+        "body": "Using a design system provides several significant advantages, particularly for organizations delivering consistent user experiences across multiple platforms."
+      },
+      "illustration": "/illustrations/robot-kit.png",
+      "cta": {
+        "label": "Start building",
+        "variant": "primary",
+        "classes": "bg-brandGreen text-primary font-semibold px-6 py-3 rounded-full"
+      }
+    },
+    "KnowledgeGrid": {
+      "grid": "grid grid-cols-6 gap-6 mt-8",
+      "slots": [
+        {
+          "span": "col-span-4",
+          "component": "ArticleList"
+        },
+        {
+          "span": "col-span-2",
+          "component": "TilesStack"
+        }
+      ]
+    },
+    "ArticleList": {
+      "cards": [
+        {
+          "author": "Sarah",
+          "timeAgo": "20 mins ago",
+          "title": "How to add icons to Adobe XD",
+          "excerpt": "Add icons directly in the tool or import SVG, PNG, or JPG via File > Import or drag-and-drop the asset onto your artboard.",
+          "media": null
+        },
+        {
+          "author": "Ramy",
+          "timeAgo": "35 mins ago",
+          "title": "Setting up the artboards",
+          "excerpt": "Start from the Artboard tool (rectangle with plus icon) or shortcut A. Choose responsive presets before refining the grid.",
+          "media": "/screens/xp-artboards.png"
+        },
+        {
+          "author": "Haidi",
+          "timeAgo": "30 mins ago",
+          "title": "Creating a layout",
+          "excerpt": "Set up a consistent grid, then add and organize components for adaptive breakpoints.",
+          "media": null
+        }
+      ],
+      "cardStyles": "bg-card rounded-2xl p-6 flex gap-4 shadow-sm"
+    },
+    "TilesStack": {
+      "tiles": [
+        {
+          "title": "Figma design kit",
+          "subtitle": "Load a library of assets",
+          "icon": "figma",
+          "classes": "bg-card rounded-2xl p-6"
+        },
+        {
+          "title": "Space, grids and styles",
+          "subtitle": "Guides to how to utilize our assets in UI",
+          "classes": "bg-card rounded-2xl p-6"
+        },
+        {
+          "title": "Adaptive design",
+          "subtitle": "Guidance on variable screen sizes spanning mobile to desktop.",
+          "badge": "Start building",
+          "classes": "bg-gradient-to-r from-brandGreen to-brandGreenDark text-primary rounded-2xl p-6 text-white"
+        }
+      ]
+    }
+  },
+  "contentStrategy": {
+    "tone": "Professional, encouraging, focused on process transparency.",
+    "goals": [
+      "Showcase employee's system thinking and reusable assets.",
+      "Provide actionable guidance for product teams.",
+      "Highlight community contributions and documentation depth."
+    ],
+    "callsToAction": [
+      { "label": "Start building", "route": "/request-demo" },
+      { "label": "Suggest new features", "route": "/feedback" }
+    ]
+  }
+}

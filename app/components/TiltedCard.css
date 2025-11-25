@@ -1,0 +1,78 @@
+.tilted-card-figure {
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure the figure doesn't overflow if we don't want it to, but for tooltip we might need visible overflow or portal. 
+     The JS uses x/y on figcaption relative to figure, so figure needs to be the positioning context. 
+  */
+}
+
+.tilted-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  /* Shadow for depth */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 16px; /* Matching the rounded look in Hero */
+}
+
+.tilted-card-img {
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+  pointer-events: none; /* Let clicks pass through if needed */
+  backface-visibility: hidden;
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.tilted-card-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  /* Center the tooltip on the cursor if desired, but the JS sets x/y to cursor pos relative to rect left/top. 
+     We might want to offset it slightly so it doesn't block the cursor.
+  */
+  transform: translate(15px, 15px); 
+}
+
+.tilted-card-mobile-alert {
+  display: none;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .tilted-card-mobile-alert {
+    display: block;
+  }
+}
+
