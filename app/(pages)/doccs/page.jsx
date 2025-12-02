@@ -9,7 +9,6 @@ const sidebarData = {
       title: "Meny",
       items: [
         { label: "Om meg", href: "/about" },
-        { label: "Kontakt", href: "/kontakt" },
       ],
     },
   ],

@@ -1,6 +1,6 @@
 export default function TilesStack({ data }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       {data.tiles.map((tile, idx) => {
         const isGradient = tile.classes.includes("gradient");
         const baseClasses = isGradient

@@ -2,7 +2,7 @@ import TiltedCard from "./TiltedCard";
 
 export default function Hero({ data }) {
   return (
-    <section className="bg-card rounded-3xl p-10 flex gap-8 items-center shadow-[0_20px_60px_rgba(8,15,32,0.12)]">
+    <section className="bg-card rounded-3xl p-5 md:p-8 flex flex-col md:flex-row gap-6 items-center shadow-[0_20px_60px_rgba(8,15,32,0.12)]">
       <div className="flex-1 flex flex-col gap-6">
         <div>
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-brandGreen">
@@ -15,11 +15,11 @@ export default function Hero({ data }) {
         <p className="text-base leading-relaxed text-textMuted">
           {data.content.body}
         </p>
-        <button className="bg-brandGreen text-primary font-semibold px-6 py-3 rounded-full hover:bg-brandGreenDark transition-colors w-fit">
+        <button className="bg-brandGreen text-white font-semibold px-6 py-3 rounded-full hover:bg-brandGreenDark transition-colors w-fit">
           {data.cta.label}
         </button>
       </div>
-      <div className="shrink-0 w-64 h-64 bg-linear-to-br from-accent/20 to-brandGreen/20 rounded-2xl flex items-center justify-center relative">
+      <div className="shrink-0 w-48 h-48 md:w-56 md:h-56 bg-linear-to-br from-accent/20 to-brandGreen/20 rounded-2xl flex items-center justify-center relative">
         {data.image ? (
           <TiltedCard
             imageSrc={data.image}
