@@ -28,18 +28,17 @@ const portfolioData = {
     cards: [
       {
         author: "Meg",
-        timeAgo: "Nylig oppdatert",
-        title: "Design System Arkitektur",
+        timeAgo: "15. januar 2025",
+        title: "Portfolio",
         excerpt:
-          "Hvordan jeg strukturerer mine designsystemer for skalerbarhet og gjenbrukbarhet i moderne webapplikasjoner.",
+          "Utforsk mine nyeste prosjekter og arbeider innen design, utvikling og kreativ teknologi.",
         media: true,
       },
       {
         author: "Meg",
-        timeAgo: "1 uke siden",
+        timeAgo: "15. januar 2025",
         title: "3D Karakter Design",
-        excerpt:
-          "En gjennomgang av prosessen fra skisse til ferdig render av 3D-karakterer for spill og media.",
+        excerpt: "Her kommer info om spennende prosjekter",
         media: true,
       },
     ],
@@ -48,7 +47,7 @@ const portfolioData = {
     tiles: [
       {
         title: "GamingPortal",
-        subtitle: "Se samling",
+        subtitle: "jobbes forløpig med",
         icon: "palette",
         classes: ["gradient"],
         href: "https://test1-ashen-mu.vercel.app/",
@@ -61,14 +60,14 @@ const portfolioData = {
         href: "https://color-orpin-phi.vercel.app/",
       },
       {
-        title: "3D Models",
-        subtitle: "Utforsk modeller",
+        title: "",
+        subtitle: "Kommer snart",
         icon: "cube",
         classes: ["gradient"],
       },
       {
-        title: "Spot Illustrations",
-        subtitle: "Illustrasjonsgalleri",
+        title: "",
+        subtitle: "Kommer snart",
         icon: "sparkles",
         classes: ["gradient"],
       },
