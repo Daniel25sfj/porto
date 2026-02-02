@@ -15,7 +15,7 @@ export default function Hero({ data }) {
         <p className="text-base leading-relaxed text-textMuted">
           {data.content.body}
         </p>
-        <button className="bg-brandGreen text-white font-semibold px-6 py-3 rounded-full hover:bg-brandGreenDark transition-colors w-fit">
+        <button className="bg-brandGreen text-white font-semibold px-6 py-3 rounded-full w-fit">
           {data.cta.label}
         </button>
       </div>

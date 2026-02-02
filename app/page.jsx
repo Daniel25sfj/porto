@@ -28,7 +28,7 @@ const portfolioData = {
     cards: [
       {
         author: "Meg",
-        timeAgo: "15. januar 2025",
+        timeAgo: "15. januar 2026",
         title: "Portfolio",
         excerpt:
           "Utforsk mine nyeste prosjekter og arbeider innen design, utvikling og kreativ teknologi.",
@@ -36,9 +36,9 @@ const portfolioData = {
       },
       {
         author: "Meg",
-        timeAgo: "15. januar 2025",
-        title: "3D Karakter Design",
-        excerpt: "Her kommer info om spennende prosjekter",
+        timeAgo: "15. januar 2026",
+        title: "La til AI PDF Reader",
+        excerpt: "logg inn med clerk og test ut!",
         media: true,
       },
     ],
@@ -60,16 +60,11 @@ const portfolioData = {
         href: "https://color-orpin-phi.vercel.app/",
       },
       {
-        title: "",
-        subtitle: "Kommer snart",
+        title: "Ai pdf leser",
+        subtitle: "test ut!",
         icon: "cube",
         classes: ["gradient"],
-      },
-      {
-        title: "",
-        subtitle: "Kommer snart",
-        icon: "sparkles",
-        classes: ["gradient"],
+        href: "https://pdf-ai-reader-indol.vercel.app/",
       },
     ],
   },

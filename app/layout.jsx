@@ -22,13 +22,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="no">
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased flex flex-col h-screen overflow-hidden`}
       >
-        <div className="grow overflow-y-auto">
-          {children}
-        </div>
+        <div className="grow overflow-y-auto">{children}</div>
         <Footer />
       </body>
     </html>
