@@ -19,7 +19,7 @@ export default function Hero({ data }) {
           {data.cta.label}
         </button>
       </div>
-      <div className="shrink-0 w-48 h-48 md:w-56 md:h-56 bg-linear-to-br from-accent/20 to-brandGreen/20 rounded-2xl flex items-center justify-center relative">
+      <div className="shrink-0 w-48 h-48 md:w-72 md:h-72 bg-linear-to-br from-accent/20 to-brandGreen/20 rounded-2xl flex items-center justify-center relative">
         {data.image ? (
           <TiltedCard
             imageSrc={data.image}

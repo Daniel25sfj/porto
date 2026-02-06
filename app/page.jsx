@@ -72,33 +72,40 @@ const portfolioData = {
 
 export default function Home() {
   return (
-    <div className="bg-surface py-6 px-6">
-      <div className="max-w-[1200px] mx-auto">
-        {/* Two Column Layout */}
-        <div className="flex flex-col md:flex-row gap-4">
-          {/* Left Sidebar - 3/12 width */}
-          <div className="w-full md:w-3/12">
-            <SidebarNav data={portfolioData.sidebar} />
-          </div>
-
-          {/* Right Content - 9/12 width */}
-          <div className="w-full md:w-9/12 flex flex-col gap-4">
-            {/* Hero Section */}
-            <Hero data={portfolioData.hero} />
-
-            {/* Knowledge Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-              {/* Article List - 4 columns */}
-              <div className="col-span-1 md:col-span-4">
-                <ArticleList data={portfolioData.articles} />
-              </div>
-
-              {/* Tiles Stack - 2 columns */}
-              <div className="col-span-1 md:col-span-2">
-                <TilesStack data={portfolioData.tiles} />
-              </div>
+    <div className="bg-surface min-h-screen py-8 px-4 md:px-8">
+      <div className="max-w-[1400px] mx-auto">
+        {/* Main Grid Layout - 12 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
+          {/* Sidebar / Menu Area - Spans 3 cols on desktop */}
+          <div className="col-span-1 md:col-span-3 lg:col-span-3 flex flex-col gap-6">
+            <div className="sticky top-8">
+              <SidebarNav data={portfolioData.sidebar} />
             </div>
           </div>
+
+          {/* Content Area - Spans 9 cols on desktop */}
+          <div className="col-span-1 md:col-span-9 lg:col-span-9 flex flex-col gap-6">
+            
+            {/* Row 1: Hero Section */}
+            <Hero data={portfolioData.hero} />
+
+            {/* Row 2: Mixed Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              
+              {/* Articles Column (Takes 2/3 width on large screens) */}
+              <div className="lg:col-span-2">
+                 <ArticleList data={portfolioData.articles} />
+              </div>
+
+              {/* Tiles/Widgets Column (Takes 1/3 width on large screens) */}
+              <div className="lg:col-span-1">
+                <TilesStack data={portfolioData.tiles} />
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
